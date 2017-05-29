@@ -1,0 +1,2 @@
+
+php artisan make:mail UserRegistered --markdown=emails.user.registered
