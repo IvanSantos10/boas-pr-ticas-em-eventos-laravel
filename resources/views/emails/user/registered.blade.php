@@ -1,12 +1,12 @@
 @component('mail::message')
-# Introduction
+    # Olá {{$user->name}}
 
-The body of your message.
+    Sua conta foi criada.
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+    @component('mail::button', ['url' => ''])
+        Clique aqui para ativar sua conta
+    @endcomponent
 
-Thanks,<br>
-{{ config('app.name') }}
+    Obrigado,<br>
+    {{ config('app.name') }}
 @endcomponent
