@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\StockEntry;
+use App\StockOutput;
 use Illuminate\Http\Request;
 
-class StockEntriesController extends Controller
+class StockOutputsController extends Controller
 {
 
     /**
@@ -16,8 +17,8 @@ class StockEntriesController extends Controller
      */
     public function index()
     {
-        $movements = StockEntry::all();
-        return view('stock-entries.index', compact('movements'));
+        $movements = StockOutput::all();
+        return view('stock-outputs.index', compact('movements'));
     }
 
     /**
@@ -26,7 +27,7 @@ class StockEntriesController extends Controller
     public function create()
     {
         $products = Product::all()->pluck('name', 'id');
-        return view('stock-entries.create', compact('products'));
+        return view('stock-outputs.create', compact('products'));
     }
 
     public function store(Request $request)

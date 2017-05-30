@@ -28,8 +28,7 @@ $factory->define(\App\Product::class, function (\Faker\Generator $faker){
         'name' => $faker->word,
         'stock' => rand(0, 100),
         'stock_max' => rand(0, 100),
-        'stock_sale' => rand(0, 100),
-        'price_sale' => rand(0, 100),
-        'price_purchase' => rand(0, 100),
+        'price_sale' => rand(1, 100),
+        'price_purchase' => rand(1, 100),
     ];
 });

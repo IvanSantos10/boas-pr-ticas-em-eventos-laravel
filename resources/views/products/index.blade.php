@@ -21,8 +21,8 @@
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->stock }}</td>
                         <td>{{ $product->stock_max }}</td>
-                        <td>{{ $product->stock_sale }}</td>
-                        <td>{{ $product->stock_purchase }}</td>
+                        <td>{{ $product->price_sale }}</td>
+                        <td>{{ $product->price_purchase }}</td>
                     </tr>
                 @endforeach
             </table>
