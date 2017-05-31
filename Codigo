@@ -1,2 +1,3 @@
 
 php artisan make:mail UserRegistered --markdown=emails.user.registered
+php artisan event:generate

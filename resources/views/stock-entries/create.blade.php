@@ -3,10 +3,12 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <h3>Entradas de Estoques</h3>
-            <a href="{{route('stock_entries.create')}}" class="btn btn-primary">Novo</a>
+            <h3>Criar entrada</h3>
+            {!! Form::open(['url' => route('stock_entries.store'), 'method' => 'POST']) !!}
+                @include('stock-movements._create')
+            {!! Form::close() !!}
         </div>
         <br/>
-        @include('stock-movements._create')
     </div>
 @endsection
+

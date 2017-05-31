@@ -13,7 +13,7 @@ class CreateStockOutputsTable extends Migration
      */
     public function up()
     {
-        Schema::create('storck_outputs', function (Blueprint $table) {
+        Schema::create('stock_outputs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('quantity');
             $table->integer('product_id')->unsigned();
@@ -29,6 +29,6 @@ class CreateStockOutputsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('storck_outputs');
+        Schema::dropIfExists('stock_outputs');
     }
 }

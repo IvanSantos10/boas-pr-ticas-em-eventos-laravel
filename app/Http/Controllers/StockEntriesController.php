@@ -32,10 +32,8 @@ class StockEntriesController extends Controller
     public function store(Request $request)
     {
         $data = array_except($request->all(), '_token');
-        $entry = StockEntry::forceCreate($data);
-        $product = $entry->product;
-        $product->stock = $product->stock + $entry->quantity;
-        $product->save();
+        StockEntry::forceCreate($data);
+
         return redirect()->route('stock_entries.index');
     }
 }
