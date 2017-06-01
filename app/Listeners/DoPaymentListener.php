@@ -4,9 +4,12 @@ namespace App\Listeners;
 
 use App\Events\OrderCreatedFully;
 use App\Payment\PaymentGateway;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 
-class DoPaymentListener
+class DoPaymentListener implements ShouldQueue
 {
+    use InteractsWithQueue;
     /**
      * @var PaymentGateway
      */
