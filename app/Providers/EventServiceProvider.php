@@ -35,6 +35,7 @@ class EventServiceProvider extends ServiceProvider
         ],
         'App\Events\PaymentCompleted' => [
             'App\Listeners\SendMailPaymentCompletedListener',
+            'App\Listeners\GenerateReceiptListener',
         ],
     ];
 
