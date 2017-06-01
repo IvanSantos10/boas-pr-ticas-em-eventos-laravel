@@ -3,8 +3,11 @@
 namespace App\Listeners;
 
 use App\Events\StockOutputCreated;
-class DecrementStockListener
+use App\Stock\DecrementStocks;
+
+class DecrementStockFromOutputListener
 {
+    use DecrementStocks;
 
     /**
      * Handle the event.
@@ -17,7 +20,6 @@ class DecrementStockListener
         //decrementar o estoque do produto
         $output = $event->getOutput();
         $product = $output->product;
-        $product->stock = $product->stock - $output->quantity;
-        $product->save();
+        $this->decrement($product, $output->quantity);
     }
 }

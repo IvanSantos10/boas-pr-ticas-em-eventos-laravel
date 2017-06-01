@@ -17,7 +17,7 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\IncrementStockListener',
         ],
         'App\Events\StockOutputCreated' => [
-            'App\Listeners\DecrementStockListener',
+            'App\Listeners\DecrementStockFromOutputListener',
         ],
         'App\Events\ProductUpdated' => [
             'App\Listeners\ChechStockMaxListener',
@@ -25,6 +25,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         'App\Events\OrderProductsSaveCompleted' => [
             'App\Listeners\CalculateTotalOrderListener',
+        ],
+        'App\Events\OrderProductCreated' => [
+            'App\Listeners\DecrementStockFromCheckoutListener',
         ],
     ];
 
