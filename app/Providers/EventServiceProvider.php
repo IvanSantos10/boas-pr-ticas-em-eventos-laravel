@@ -23,6 +23,9 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\ChechStockMaxListener',
             'App\Listeners\ChechStockMinListener',
         ],
+        'App\Events\OrderProductsSaveCompleted' => [
+            'App\Listeners\CalculateTotalOrderListener',
+        ],
     ];
 
     /**

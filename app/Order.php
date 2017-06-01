@@ -11,9 +11,6 @@ class Order extends Model
     {
         return $this->hasMany(OrderProduct::class);
     }
-    protected $events = [
-        'updated' => ProductUpdated::class
-    ];
 
     public function user()
     {
