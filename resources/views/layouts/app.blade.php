@@ -37,6 +37,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="{{route('products.index')}}" >Produtos</a></li>
+                        <li><a href="{{route('orders.create')}}" >Chechout</a></li>
                         <li><a href="{{route('stock_entries.index')}}" >Entrada do estoque</a></li>
                         <li><a href="{{route('stock_outputs.index')}}" >Saídas de estoque</a></li>
                     </ul>
@@ -72,7 +73,6 @@
                 </div>
             </div>
         </nav>
-
         @yield('content')
     </div>
 
